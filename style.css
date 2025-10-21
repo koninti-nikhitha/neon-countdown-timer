@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0a0a0a; /* Dark background for neon effect */
+    color: #fff;
+}
+
+.countdown-wrapper {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #0ff; /* Neon text */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.countdown {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+circle {
+    fill: none;
+    stroke-width: 15;
+    stroke-linecap: round;
+}
+
+circle:first-child {
+    stroke: rgba(255, 255, 255, 0.1); /* Background ring */
+}
+
+circle:last-child {
+    stroke: #0ff; /* Neon foreground */
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 1s linear;
+    filter: drop-shadow(0 0 10px #0ff) drop-shadow(0 0 20px #0ff);
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.number h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.number p {
+    font-size: 1rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
